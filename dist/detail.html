@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Detail Page</title>
+    <link rel="stylesheet" type="text/css" href="css/products/detail-style.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/products/products.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+  </head>
+  <body>
+    <!-- menu -->
+    <div class="overlay hidden"></div>
+    <nav id="sidebar" class="hide-menu img">
+      <div class="p-4">
+        <h1><a href="index.html" class="logo">AwesomePic</a></h1>
+        <ul class="components mb-5">
+          <li id="home">
+            <a href="index.html"
+              ><span class="fas fa-home mr-3"></span>Home</a
+            >
+          </li>
+          <li id="product">
+            <a href="products.html"
+              ><span class="fas fa-image mr-3"></span>Product</a
+            >
+          </li>
+          <li id="pricing" class="active">
+            <a href="pricing.html"
+              ><span class="fa fa-donate mr-3"></span>Pricing</a
+            >
+          </li>
+          <li id="aboutus">
+            <a href="aboutUs.html"
+              ><span class="fa fa-users mr-3"></span>About Us</a
+            >
+          </li>
+          <li id="contactus">
+            <a href="contact.html"
+              ><span class="fa fa-envelope mr-3"></span>Contact Us</a
+            >
+          </li>
+        </ul>
+
+        <div class="mb-5">
+          <h3 class="h6 mb-3">Receive notifications</h3>
+          <form action="get" class="subscribe-form">
+            <div class="form-group d-flex">
+              <div class="icon"><span class="icon-paper-plane"></span></div>
+              <input
+                type="email"
+                class="form-control"
+                placeholder="Enter Email Address"
+              />
+            </div>
+          </form>
+        </div>
+
+        <div class="footer">
+          <p>
+            Copyright &copy;
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            All rights reserved | This template is made with
+            <i class="icon-heart" aria-hidden="true"></i> by
+            <a href="https://awesompic.com" target="_blank">awesomepic.com</a>
+          </p>
+        </div>
+      </div>
+    </nav>
+    <nav style="position: fixed" class="navbar-thao bg-light">
+      <ul class="navbar-ul">
+        <li>
+          <i class="fas fa-bars" id="menu-button"></i>
+          <a
+            href="index.html"
+            class="btn-thao hide-btn btn-primary my-0 left"
+            ><i class="fas fa-home"></i>Home</a
+          >
+          <a href="products.html" class="btn-thao hide-btn btn-primary left"
+            ><i class="fas fa-images"></i>Product</a
+          >
+          <a href="pricing.html" class="btn-thao hide-btn btn-primary left"
+            ><i class="fas fa-donate"></i>Pricing</a
+          >
+        </li>
+      </ul>
+      <ul class="navbar-ul">
+        <li>
+          <a href="aboutUs.html" class="nav-page hide-btn">
+            <i class="fas fa-users"></i>About us</a
+          >
+          <a href="contact.html" class="nav-page hide-btn">
+            <i class="fas fa-envelope"></i>Contact us</a
+          >
+          <i class="fas fa-shopping-cart"></i>
+          <a href="signUp.html" class="nav-page"> Sign Up</a>
+          <a href="login.html" class="btn-thao btn-primary gradient right"
+            >Sign In</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <!-- end menu -->
+    <!-- Search form -->
+    <div>
+      <div class="title-page pricing-title">
+        <div class="main-title-page dark-blue">Search AwesomePic</div>
+        <div class="sub-title-page">Find your inspiration.</div>
+      </div>
+      <form class="form-inline d-flex justify-content-center md-form form-sm active-cyan active-cyan-2 mt-2 search-form">
+        <i class="fas fa-search" aria-hidden="true"></i>
+        <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
+          aria-label="Search">
+      </form>
+    </div>
+    <!-- end search form -->
+    <!-- container -->
+    <div class="container">
+      <!-- Detail -->
+      <div id="detail-image">
+        <h1 class="aboutus-title pricing-title">Detail Image</h1>
+        <div class="detail-img">
+          <div class="row tm-mb-90">
+              <div class="col-xl-8 col-lg-7 col-md-6 col-sm-12">
+                  <img src="img/products/detail/img-01-big.jpg" alt="Image" class="img-fluid">
+              </div>
+              <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12">
+                  <div class=" detail-image-info">
+                      <p class="sub-content detail-image-txt1">
+                          Please support us by making <a href="pricing.html" target="_parent" rel="sponsored">a Pay donation</a>. Nam ex nibh, efficitur eget libero ut, placerat aliquet justo. Cras nec varius leo.
+                      </p>
+                      <div class="detail-image-txt2">
+                          <div class="mr-4 mb-2">
+                              <p class="sub-content detail-image-txt2">
+                                <span class="tm-text-gray-dark">Dimension: </span>
+                                <select name="demension" class="op-download-img">
+                                  <option class="select-option" value="">4096×2160</option>
+                                  <option class="select-option" value="">2046×1080</option>
+                                  <option class="select-option" value="">910×480</option>
+                                </select>
+                              </p>
+                          </div>
+                          <div class="mr-4 mb-2">
+                            <p class="sub-content detail-image-txt2">
+                              <span class="tm-text-gray-dark">Format: </span>
+                              <select name="format" class="op-download-img">
+                                <option class="select-option" value="">JPG</option>
+                                <option class="select-option" value="">JPEG</option>
+                                <option class="select-option" value="">PNG</option>
+                              </select>
+                            </p>
+                          </div>
+                      </div>
+                      <div class="joinUs btn-download-img">
+                        <a class="btn-thao btn-primary gradient buy-now-button right" href="#" target="_blank">Download Now</a>
+                      </div>
+                      <hr>
+                      <div class="mb-4">
+                          <h3 class="tm-text-gray-dark mb-3">License</h3>
+                          <p>Free for both personal and commercial use. No need to pay anything. No need to make any attribution.</p>
+                      </div>
+                      <div>
+                          <h3 class="tm-text-gray-dark mb-3">Tags</h3>
+                          <a href="#" class="tm-text-primary mr-4 mb-2 d-inline-block">Cloud</a>
+                          <a href="#" class="tm-text-primary mr-4 mb-2 d-inline-block">Bluesky</a>
+                          <a href="#" class="tm-text-primary mr-4 mb-2 d-inline-block">Nature</a>
+                          <a href="#" class="tm-text-primary mr-4 mb-2 d-inline-block">Background</a>
+                          <a href="#" class="tm-text-primary mr-4 mb-2 d-inline-block">Timelapse</a>
+                          <a href="#" class="tm-text-primary mr-4 mb-2 d-inline-block">Night</a>
+                          <a href="#" class="tm-text-primary mr-4 mb-2 d-inline-block">Real Estate</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <!-- End detail -->
+      <!-- Related Photos -->
+      <div id="relates-photos">
+        <h1 class="aboutus-title pricing-title">Related Photos</h1>
+        <hr class="border-title">
+        <div class="row mb-3 tm-gallery">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/products/detail/img-01.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>Hangers</h2>
+                        <a href="#">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">16 Oct 2020</span>
+                    <span>12,460 views</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/products/detail/img-02.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>Perfumes</h2>
+                        <a href="#">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">12 Oct 2020</span>
+                    <span>11,402 views</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/products/detail/img-03.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>Clocks</h2>
+                        <a href="#">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">8 Oct 2020</span>
+                    <span>9,906 views</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/products/detail/img-01.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>Hangers</h2>
+                        <a href="#">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">16 Oct 2020</span>
+                    <span>12,460 views</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/products/detail/img-02.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>Perfumes</h2>
+                        <a href="#">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">12 Oct 2020</span>
+                    <span>11,402 views</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/products/detail/img-03.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>Clocks</h2>
+                        <a href="#">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">8 Oct 2020</span>
+                    <span>9,906 views</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/products/detail/img-04.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>Plants</h2>
+                        <a href="#">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">6 Oct 2020</span>
+                    <span>16,100 views</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/products/detail/img-05.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>Morning</h2>
+                        <a href="#">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">26 Sep 2020</span>
+                    <span>16,008 views</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/products/detail/img-06.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>Pinky</h2>
+                        <a href="#">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">22 Sep 2020</span>
+                    <span>12,860 views</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/products/detail/img-07.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>Bus</h2>
+                        <a href="#">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">12 Sep 2020</span>
+                    <span>10,900 views</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/products/detail/img-08.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>New York</h2>
+                        <a href="#">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">4 Sep 2020</span>
+                    <span>11,300 views</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/products/detail/img-05.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>Morning</h2>
+                        <a href="#">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">26 Sep 2020</span>
+                    <span>16,008 views</span>
+                </div>
+            </div>
+        </div>
+      </div>
+      <!-- end Related Photos -->
+      <!-- list trending search -->
+      <div class="row mt-5" id="trending-search">
+        <h1 class="aboutus-title pricing-title">Trending Search</h1>
+        <hr class="border-title">
+        <div class="trending-search-content">
+          <div class="trending-search-list">
+            <p><a href="search_results.html">Thanksgiving1</a></p>
+            <p><a href="search_results.html">Motivational Quotes</a></p>
+            <p><a href="search_results.html">Colorful Background</a></p>
+            <p><a href="search_results.html">Baby Photos</a></p>
+            <p><a href="search_results.html">Teleworking</a></p>
+            <p><a href="search_results.html">White American Family</a></p>
+          </div>
+          <div class="trending-search-list">
+            <p><a href="search_results.html">Thanksgiving</a></p>
+            <p><a href="search_results.html">Motivational Quotes</a></p>
+            <p><a href="search_results.html">Colorful Background</a></p>
+            <p><a href="search_results.html">Baby Photos</a></p>
+            <p><a href="search_results.html">Teleworking</a></p>
+            <p><a href="search_results.html">White American Family</a></p>
+          </div><div class="trending-search-list">
+            <p><a href="search_results.html">Thanksgiving</a></p>
+            <p><a href="search_results.html">Motivational Quotes</a></p>
+            <p><a href="search_results.html">Colorful Background</a></p>
+            <p><a href="search_results.html">Baby Photos</a></p>
+            <p><a href="search_results.html">Teleworking</a></p>
+            <p><a href="search_results.html">White American Family</a></p>
+          </div><div class="trending-search-list">
+            <p><a href="search_results.html">Thanksgiving</a></p>
+            <p><a href="search_results.html">Motivational Quotes</a></p>
+            <p><a href="search_results.html">Colorful Background</a></p>
+            <p><a href="search_results.html">Baby Photos</a></p>
+            <p><a href="search_results.html">Teleworking</a></p>
+            <p><a href="search_results.html">White American Family</a></p>
+          </div><div class="trending-search-list">
+            <p><a href="search_results.html">Thanksgiving</a></p>
+            <p><a href="search_results.html">Motivational Quotes</a></p>
+            <p><a href="search_results.html">Colorful Background</a></p>
+            <p><a href="search_results.html">Baby Photos</a></p>
+            <p><a href="search_results.html">Teleworking</a></p>
+            <p><a href="search_results.html">White American Family</a></p>
+          </div>
+          <div class="trending-search-list">
+            <p><a href="search_results.html">Thanksgiving</a></p>
+            <p><a href="search_results.html">Motivational Quotes</a></p>
+            <p><a href="search_results.html">Colorful Background</a></p>
+            <p><a href="search_results.html">Baby Photos</a></p>
+            <p><a href="search_results.html">Teleworking</a></p>
+            <p><a href="search_results.html">White American Family</a></p>
+          </div>
+        </div>
+      </div>
+      <!--end trending search -->
+    </div>
+    <!-- end container -->
+    <!-- footer -->
+    <div class="powered">
+      <h6>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-snapchat-ghost"></a>
+        Powered by
+        <i class="awe">AwesomePic</i>
+      </h6>
+    </div>
+    <div class="footer">
+      <div class="private">
+        <ul class="footer-list">
+          <li><a href="#"><div class="footer-head-list">Get in Touch</div></a></li>
+          <li><a href="aboutUs.html" class="policy">About Us</a></li>
+          <li><a href="contact.html" class="policy">Contact Us</a></li>
+        </ul>
+        <ul class="footer-list">
+          <li><a href="#"><div class="footer-head-list">Policy</div></a></li>
+          <li><a href="#" class="policy">Term of Services</a></li>
+          <li><a href="#" class="policy">Private Policy</a></li>
+        </ul>
+      </div>
+    </div>
+  <button onclick="topFunction()" id="myBtn" class="hidden" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+  <script src="JS/scrollToTop.js" ></script>
+    <!-- end footer -->
+    <script src="JS/products/search_results/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/ae09c0f9d5.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="JS/sidebar.js"></script>
+  </body>
+</html>
