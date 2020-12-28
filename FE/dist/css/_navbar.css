@@ -1,0 +1,228 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.fa-cart-arrow-down{
+    border: none;
+    outline: none;
+}
+.pform-popup {
+  display: none;
+  position: absolute;
+  margin: auto;
+  top: 50px;
+  right: 60px;
+  color: white;
+  z-index: 9;
+}           
+.pform-container {
+  color: white;
+  width: 180px;        
+  background-color: rgb(0 , 0, 0, 0.5);           
+  text-align: center;
+}
+
+.pform-item{
+  color: white;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+.pform-item:hover{
+  color: white;
+  background-color: rgb(0 , 0, 0, 1);  
+}
+
+#btn-profile{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.page-title{
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-left: 50px;
+  margin-top: 70px;
+  background: linear-gradient(to right, #5366ab 0%, rgb(236, 21, 182) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}   
+
+.cart-header{
+  height: 60px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;    
+}
+.cart-prop{
+  display: flex;
+  align-items: center;
+  opacity: 0.8; 
+  font-size: 18px;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+.prop-wrapper{
+  display: flex;
+  align-items: center;    
+  text-align: center;
+  margin: auto;
+}
+.prop{
+  margin: auto;
+}
+.item{
+  display: flex;
+  height: 300px;
+  padding: 20px 0;
+  margin-bottom: 20px;
+  border-top: 1px solid rgba(153, 99, 99, 0.3);
+}
+.product{
+  width: 90%; 
+}
+.img-product{
+  max-width: 100%;
+  max-height: 85%;
+  width: auto;
+  height: auto;
+  display: flex;
+  margin: auto;
+}
+.img-title{
+  /* margin: auto; */
+  text-align: center;
+  margin-top: 10px;
+}
+.fa-trash{
+  color: red;
+  border: none;
+  outline:none;
+}
+.fa-trash:hover{
+  transform: scale(1.5);
+}
+.form-popup {
+  display: none;
+  position: fixed;
+  /* border: 3px solid #f1f1f1;
+  margin: auto;
+  position: absolute; */
+  margin: auto;
+  top: 40%;
+  left: calc(50% - 150px);
+  box-shadow: 2px 2px 5px 0 rgba(1, 1, 1, 0.2), -2px -2px 5px 0 rgba(1, 1, 1, 0.2);
+  /* border: 3px solid #f1f1f1; */
+  color: white;
+  /* z-index: 9; */
+}           
+.form-container {
+  display: inline-block;
+  width: 300px;
+  padding: 30px;
+  background-color: rgb(0 , 0, 0, 0.7);           
+  text-align: center;
+}
+.quantity, .q-increase, .q-decrease{
+  border: 1px solid #ced4da;
+  width: 30px;
+  background-color: transparent;
+}
+.q-decrease{
+  border-right: none;            
+}
+.q-increase{
+  border-left: none;
+}
+.cart-footer{
+  height: 100px;
+  margin: 30px 0 50px 0;
+  border-top: 1px solid rgba(0,0,0,0.25);
+}
+.landing-carts{
+  width: 70%;
+  margin: auto;
+  background-color: white;
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+  .cart-prop{
+      font-size: 16px;
+  }
+  .landing-carts{
+      
+      width: 90%;
+  }
+  .item{
+      height: 250px;
+  }
+}
+.total{            
+  display: flex;               
+  float: right;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+.ptotal{
+  margin: 8px 10px;
+}
+.total-price{
+  color: red;
+  font-size: 24px;
+}
+.btn-checkout{
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  float: right;
+  border-radius: 0.1rem !important;
+}
+/* Account */
+.landing-account{
+  width: 70%;
+  margin: auto;
+  background-color: white;
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+  .landing-account{      
+      width: 90%;
+  }
+}
+@media only screen and (max-width: 576px){
+  .landing-account{      
+    width: 100%;
+  }
+}
+
+.field, .account-inner{
+  display: flex;
+  padding: 10px;
+}
+
+.label{
+  color: rgb(87, 85, 85);
+}
+
+.field-value{
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+}
+
+.avatar{
+  border-radius: 50%;
+  border: 4px solid #ccc;
+  padding: 30px;
+}
+
+.quantity {
+  text-align: center;
+  margin: 0 auto;
+}
+.quantity::-webkit-outer-spin-button,.quantity::-webkit-inner-spin-button {
+  -webkit-appearance:none;
+  margin:0;
+}

@@ -1,0 +1,494 @@
+<?php 
+  ob_start();
+  session_start();
+?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script
+      src="https://kit.fontawesome.com/ae09c0f9d5.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Contact</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- sidebar -->
+      <div class="overlay hidden"></div>
+      <!-- sidebar -->
+      <?php 
+        include "_navbar.php"
+      ?>
+      <!-- page content -->
+      <div id="content">
+        <!-- header -->
+       
+
+        <div class="contentContact landing">
+          <div class="title-page pricing-title">
+            <div class="main-title-page dark-blue">Contact AwesomePic</div>
+            <div class="typewriter">
+              <h4>Submit form and we’ll get to you shortly.</h4>
+            </div>
+          </div>
+
+          <div class="container change-margin">
+            <div class="row">
+              <div class="col-sm-6 mktoHeightSection">
+                <div class="contact-form-inner">
+                  <div class="text-left">
+                    <p>
+                      <iframe
+                        class="inner-map"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d792.096315088!2d-122.14530077599022!3d37.42800262236046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fbae435fe542f%3A0x507cec9581f778f7!2s318%20Cambridge%20Ave%2C%20Palo%20Alto%2C%20CA%2094306%2C%20Hoa%20K%E1%BB%B3!5e0!3m2!1svi!2s!4v1605408430330!5m2!1svi!2s"
+                        width="600"
+                        height="450"
+                        style="border: 0"
+                        allowfullscreen=""
+                        aria-hidden="false"
+                        tabindex="0"
+                      ></iframe>
+                    </p>
+                    <h5>Docker Headquarters</h5>
+                    <p>
+                      Awesome, Inc.
+                      <br />
+                      318 Cambrige Avenue
+                      <br />
+                      Paolo Alto, Ca 9406
+                      <br />
+                      (415) 941-0376
+                    </p>
+                    <p>More global offices are listed below.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 text-left mktoHeightSection">
+                <div class="contact-form-inner">
+                  <div class="mktoForm_body">
+                    <form
+                      class="mktoForm form-group"
+                      action="submit"
+                      method="get"
+                    >
+                      <!-- Form Contact -->
+                      <div class="mktoForm-row">
+                        <div class="mktoForm-col" style="margin-bottom: 10px">
+                          <div class="mktoField-wrap">
+                            <div class="mktoLabel">
+                              <div class="mktoAsterisk">*</div>
+                              How can we help?
+                            </div>
+                            <select
+                              class="mktoField"
+                              name="ContactUsSubject"
+                              id="ContactUsSubject"
+                            >
+                              <option value="">Select...</option>
+                              <option value="Marketing and Community">
+                                Marketing
+                              </option>
+                              <option value="PR">PR</option>
+                              <option value="AwesomePic Pricing">
+                                Pricing
+                              </option>
+                              <option value="Awesomepic Support">
+                                Support
+                              </option>
+                            </select>
+                            <div class="mktoClear"></div>
+                          </div>
+                          <div class="mktoClear"></div>
+                        </div>
+                        <div class="mktoClear"></div>
+                      </div>
+                      <!-- Form First Name -->
+                      <div class="mktoForm-row">
+                        <div class="mktoForm-col" style="margin-bottom: 10px">
+                          <div class="mktoField-wrap">
+                            <div class="mktoLabel">
+                              <div class="mktoAsterisk">*</div>
+                              First Name:
+                            </div>
+                            <input
+                              class="mktoField"
+                              type="text"
+                              name="FirstName"
+                              id="FirstName"
+                              placeholder="First Name"
+                            />
+                            <div class="mktoClear"></div>
+                          </div>
+                          <div class="mktoClear"></div>
+                        </div>
+                        <div class="mktoClear"></div>
+                      </div>
+                      <!-- Form Last Name -->
+                      <div class="mktoForm-row">
+                        <div class="mktoForm-col" style="margin-bottom: 10px">
+                          <div class="mktoField-wrap">
+                            <div class="mktoLabel">
+                              <div class="mktoAsterisk">*</div>
+                              Last Name:
+                            </div>
+                            <input
+                              class="mktoField"
+                              type="text"
+                              name="LastName"
+                              id="LastName"
+                              placeholder="Last Name"
+                            />
+                            <div class="mktoClear"></div>
+                          </div>
+                          <div class="mktoClear"></div>
+                        </div>
+                        <div class="mktoClear"></div>
+                      </div>
+                      <!-- Form Company -->
+                      <div class="mktoForm-row">
+                        <div class="mktoForm-col" style="margin-bottom: 10px">
+                          <div class="mktoField-wrap">
+                            <div class="mktoLabel">
+                              <div class="mktoAsterisk">*</div>
+                              Company:
+                            </div>
+                            <input
+                              class="mktoField"
+                              type="text"
+                              name="Company"
+                              id="Company"
+                              placeholder="Company"
+                            />
+                            <div class="mktoClear"></div>
+                          </div>
+                          <div class="mktoClear"></div>
+                        </div>
+                        <div class="mktoClear"></div>
+                      </div>
+                      <!-- Form Email Address -->
+                      <div class="mktoForm-row">
+                        <div class="mktoForm-col" style="margin-bottom: 10px">
+                          <div class="mktoField-wrap">
+                            <div class="mktoLabel">
+                              <div class="mktoAsterisk">*</div>
+                              Email Address:
+                            </div>
+                            <input
+                              class="mktoField"
+                              type="email"
+                              name="Email"
+                              id="Email"
+                              placeholder="Email Address"
+                            />
+                            <div class="mktoClear"></div>
+                          </div>
+                          <div class="mktoClear"></div>
+                        </div>
+                        <div class="mktoClear"></div>
+                      </div>
+                      <!-- Form Phone -->
+                      <div class="mktoForm-row">
+                        <div class="mktoForm-col" style="margin-bottom: 10px">
+                          <div class="mktoField-wrap">
+                            <div class="mktoLabel">
+                              <div class="mktoAsterisk">*</div>
+                              Phone:
+                            </div>
+                            <input
+                              class="mktoField"
+                              type="tel"
+                              name="Phone"
+                              id="Phone"
+                              placeholder="Phone"
+                            />
+                            <div class="mktoClear"></div>
+                          </div>
+                          <div class="mktoClear"></div>
+                        </div>
+                        <div class="mktoClear"></div>
+                      </div>
+                      <!-- Form Country -->
+                      <div class="mktoForm-row">
+                        <div class="mktoForm-col" style="margin-bottom: 10px">
+                          <div class="mktoField-wrap">
+                            <div class="mktoLabel">
+                              <div class="mktoAsterisk">*</div>
+                              National:
+                            </div>
+                            <select
+                              class="mktoField"
+                              name="national"
+                              id="national"
+                            >
+                              <option value="">Select...</option>
+                              <option value="United Kingdom">
+                                United Kingdom
+                              </option>
+                              <option value="United States">
+                                United States
+                              </option>
+                              <option value="Viet Nam">Viet Nam</option>
+                            </select>
+                            <div class="mktoClear"></div>
+                          </div>
+                          <div class="mktoClear"></div>
+                        </div>
+                        <div class="mktoClear"></div>
+                      </div>
+                      <!-- Form Message -->
+                      <div class="mktoForm-row">
+                        <div class="mktoForm-col" style="margin-bottom: 10px">
+                          <div class="mktoField-wrap">
+                            <div class="mktoLabel">Message:</div>
+                            <textarea
+                              class="mktoField"
+                              name="CommentForUs"
+                              id="CommentForUs"
+                              rows="4"
+                              maxlength="999"
+                              style="width: 150px"
+                            ></textarea>
+                            <div class="mktoClear"></div>
+                          </div>
+                          <div class="mktoClear"></div>
+                        </div>
+                        <div class="mktoClear"></div>
+                      </div>
+                      <!-- Form Submit -->
+                      <div class="mktoButtonRow">
+                        <span class="mktoButton-wrap text-center">
+                          <button
+                            type="submit"
+                            class="btn-thao btn-primary gradient right"
+                          >
+                            Submit
+                          </button>
+                        </span>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container change-margin">
+            <div class="col-sm-12">
+              <h1 class="contact-title">AwesomePic offices</h1>
+            </div>
+          </div>
+
+          <div class="container change-margin">
+            <div class="row">
+              <div class="card-col">
+                <div class="card-item">
+                  <div class="card">
+                    <div class="map-wrap">
+                      <iframe
+                        class="map-office"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.175662378875!2d105.84381925089895!3d21.025656193190567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab96b2779acf%3A0x82afcca1ee3286b5!2sH%C3%A0%20N%E1%BB%99i%20Towers%20Shopping%20Center!5e0!3m2!1svi!2s!4v1605464316514!5m2!1svi!2s"
+                        width="400"
+                        height="300"
+                        style="border: 0"
+                        allowfullscreen=""
+                        aria-hidden="false"
+                        tabindex="0"
+                      ></iframe>
+                    </div>
+
+                    <div class="text-wrap">
+                      <div class="inner">
+                        <h4>Hà Nội Tower</h4>
+                        <p>
+                          65 Thợ Nhuộm, Cửa Nam
+                          <br />
+                          Hoàn Kiếm, Hà Nội
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="links">
+                      <a
+                        class="btn-thao btn-primary right free-button buy-now-button"
+                        href="https://www.google.com/maps?ll=21.025651,105.846013&z=16&t=m&hl=vi&gl=US&mapclient=embed&cid=9416970341713086133"
+                        target="_blank"
+                        >Directions</a
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-item">
+                  <div class="card">
+                    <div class="map-wrap">
+                      <iframe
+                        class="map-office"
+                        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d15677.73102884896!2d106.69826485890943!3d10.778129558986171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1ssai%20gon%20center!5e0!3m2!1svi!2s!4v1605487072836!5m2!1svi!2s"
+                        width="400"
+                        height="300"
+                        style="border: 0"
+                        allowfullscreen=""
+                        aria-hidden="false"
+                        tabindex="0"
+                      ></iframe>
+                    </div>
+
+                    <div class="text-wrap">
+                      <div class="inner">
+                        <h4>SaiGon Center</h4>
+                        <p>
+                          61, Nguyễn Phúc Chu
+                          <br />
+                          Bến Thành, Hồ Chí Minh
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="links">
+                      <a
+                        class="btn-thao btn-primary buy-now-button free-button right"
+                        href="https://www.google.com/maps/search/sai+gon+center/@10.7781296,106.6982649,15z?hl=vi-VN"
+                        target="_blank"
+                        >Directions</a
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-item">
+                  <div class="card">
+                    <div class="map-wrap">
+                      <iframe
+                        class="map-office"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8069.040055933952!2d-73.99564120550622!3d40.75157686448319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259bfd7fc6e67%3A0x6da0f30edae0af8b!2sNew%20York%20Penn%20Station!5e0!3m2!1svi!2s!4v1605487350445!5m2!1svi!2s"
+                        width="400"
+                        height="300"
+                        style="border: 0"
+                        allowfullscreen=""
+                        aria-hidden="false"
+                        tabindex="0"
+                      ></iframe>
+                    </div>
+
+                    <div class="text-wrap">
+                      <div class="inner">
+                        <h4>New York Penn Station</h4>
+                        <p>
+                          W34th Sr, New York
+                          <br />
+                          NY 100001, Hoa Kỳ
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="links">
+                      <a
+                        class="btn-thao btn-primary buy-now-button free-button right"
+                        href="https://www.google.com/maps/place/New+York+Penn+Station/@40.7515769,-73.9956412,16z/data=!4m5!3m4!1s0x89c259bfd7fc6e67:0x6da0f30edae0af8b!8m2!3d40.7520149!4d-73.9933178?hl=vi-VN"
+                        target="_blank"
+                        >Directions</a
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-item">
+                  <div class="card">
+                    <div class="map-wrap">
+                      <iframe
+                        class="map-office"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.2310002731374!2d-0.09108874847009288!3d51.52732281696698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761d34c009583f%3A0x9aeebb88594babcf!2sUK%20Wide%20Hire!5e0!3m2!1svi!2s!4v1605487693132!5m2!1svi!2s"
+                        width="400"
+                        height="300"
+                        style="border: 0"
+                        allowfullscreen=""
+                        aria-hidden="false"
+                        tabindex="0"
+                      ></iframe>
+                    </div>
+
+                    <div class="text-wrap">
+                      <div class="inner">
+                        <h4>UK Wide Hire</h4>
+                        <p>
+                          Kemp House, 160 City Rd
+                          <br />
+                          London EC1V 2NX
+                          <br />
+                          Vương Quốc Anh
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="links">
+                      <a
+                        class="btn-thao btn-primary right buy-now-button free-button"
+                        href="https://www.google.com/maps/place/UK+Wide+Hire/@51.5273228,-0.0910887,17z/data=!3m1!4b1!4m5!3m4!1s0x48761d34c009583f:0x9aeebb88594babcf!8m2!3d51.5273195!4d-0.0888947?hl=vi-VN"
+                        target="_blank"
+                        >Directions</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="powered">
+          <h6>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-snapchat-ghost"></a>
+            Powered by
+            <i class="awe">AwesomePic</i>
+          </h6>
+        </div>
+        <div class="footer">
+          <div class="private">
+            <ul class="footer-list">
+              <li>
+                <div class="footer-head-list">Get in Touch</div>
+
+                <a href="aboutUs.php" class="policy">About Us</a>
+                <a href="contact.php" class="policy">Contact Us</a>
+              </li>
+            </ul>
+            <ul class="footer-list">
+              <li>
+                <div class="footer-head-list">Policy</div>
+              </li>
+              <li>
+                <a href="#" class="policy">Term of Services</a>
+              </li>
+              <li>
+                <a href="#" class="policy">Private Policy</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button onclick="topFunction()" id="myBtn" class="hidden" title="Go to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+    <script>
+      document.getElementById("contactus").classList.add('active'); 
+    </script>
+    <script src="JS/scrollToTop.js"></script>
+    <script src="JS/sidebar.js"></script>
+    <script src="JS/ddProfile.js"></script>
+  </body>
+</html>
