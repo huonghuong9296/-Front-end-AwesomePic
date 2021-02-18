@@ -1,0 +1,111 @@
+<nav id="sidebar" class="hide-menu img">
+        <div class="p-4">
+          <a href="index.html" class="logo">AwesomePic</a>
+          <ul class="components mb-5">
+            <li id="home" class="active">
+              <a href="index.html"
+                ><span class="fas fa-home mr-3"></span>Home</a
+              >
+            </li>
+            <li id="product">
+              <a href="products.html"
+                ><span class="fas fa-image mr-3"></span>Product</a
+              >
+            </li>
+            <li id="pricing">
+              <a href="pricing.html"
+                ><span class="fa fa-donate mr-3"></span>Pricing</a
+              >
+            </li>
+            <li id="aboutus">
+              <a href="aboutUs.html"
+                ><span class="fa fa-users mr-3"></span>About Us</a
+              >
+            </li>
+            <li id="contactus">
+              <a href="contact.html"
+                ><span class="fa fa-envelope mr-3"></span>Contact Us</a
+              >
+            </li>
+          </ul>
+
+          <div class="mb-5">
+            <h3 class="h6 mb-3">Receive notifications</h3>
+            <form action="get" class="subscribe-form">
+              <div class="form-group d-flex">
+                <div class="icon"><span class="icon-paper-plane"></span></div>
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Enter Email Address"
+                />
+              </div>
+            </form>
+          </div>
+
+          <div class="footer">
+            <p>
+              Copyright &copy;
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              All rights reserved | This template is made with
+              <i class="icon-heart" aria-hidden="true"></i> by
+              <a href="https://awesompic.com" target="_blank">awesomepic.com</a>
+            </p>
+          </div>
+        </div>
+      </nav>
+
+      <nav style="position: fixed" class="navbar-thao bg-light">
+        <ul class="navbar-ul">
+          <li>
+            <i class="fas fa-bars" id="menu-button"></i>
+            <a href="index.html" class="btn-thao hide-btn btn-primary my-0 left"
+              ><i class="fas fa-home"></i>Home</a
+            >
+            <a href="products.html" class="btn-thao hide-btn btn-primary left"
+              ><i class="fas fa-images"></i>Product</a
+            >
+            <a href="pricing.html" class="btn-thao hide-btn btn-primary left"
+              ><i class="fas fa-donate"></i>Pricing</a
+            >
+          </li>
+        </ul>
+        <ul class="navbar-ul">
+          <li>
+            <a href="aboutUs.html" class="nav-page hide-btn">
+              <i class="fas fa-users"></i>About us</a
+            >
+            <a href="contact.html" class="nav-page hide-btn">
+              <i class="fas fa-envelope"></i>Contact us</a
+            >
+            <a href="carts.html">
+                <i class="fas fa-cart-arrow-down"></i>
+            Cart</a>
+            
+			<button onclick="check()" id="btn-profile">
+				<i class="fas fa-user-circle"></i>
+			Username</button>
+
+			<div class="form-popup" id="myForm">
+				
+				<form action="" class="form-container">
+					
+					<div class="form-item">
+					  <a href="#" class="form-item">Profile</a>
+					</div>
+					<div class="form-item">
+					  <a href="purchase.html" class="form-item">Purchase</a>
+					</div>          
+				</form>
+			</div>  
+               
+            </a>            
+            <a href="signUp.html" class="nav-page"> Sign Up</a>
+            <a href="login.html" class="btn-thao btn-primary gradient right"
+              >Sign In</a
+            >
+          </li>
+        </ul>
+      </nav>

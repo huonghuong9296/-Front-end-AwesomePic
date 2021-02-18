@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script
+      src="https://kit.fontawesome.com/ae09c0f9d5.js"
+      crossorigin="anonymous"></script>
+	<title>Check Out</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.huong-landing{            
+            width: 70%;
+            margin: auto;
+            margin-top: 80px;
+            background-color: white;
+        }
+		@media only screen and (min-width: 768px) and (max-width: 1024px){
+            .cart-prop{
+                font-size: 16px;
+            }
+            .huong-landing{
+                
+                width: 100%;
+            }
+            .item{
+                height: 250px;
+            }
+        }
+		.page-title{
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-left: 50px;
+            background: linear-gradient(to right, #5366ab 0%, rgb(236, 21, 182) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+		.address{
+            overflow: hidden;
+            background-color: #1c2648d9;
+			color: #ffc107;
+			padding: 10px;
+			
+		}
+		.address-title{
+			margin-bottom: 0 !important;
+			font-weight: 500;
+			font-size: larger;
+		}
+		.address-detail{
+			overflow: hidden;
+            background-color: #1c2648d9;
+			color: white;
+			display: flex;
+			padding: 10px;
+			border-top: 1px solid #ffc107;
+			border-bottom: 1px solid #ccc;
+		}
+		.change{
+			color: #f3ecd9;
+			text-align: center;
+		}
+		.cart-header{
+            height: 60px;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;    
+			border-bottom: 1px solid rgba(153, 99, 99, 0.3);
+			border-top: 1px solid rgba(153, 99, 99, 0.3);
+        }
+        .cart-prop{
+            display: flex;
+            align-items: center;
+            opacity: 0.8; 
+            font-size: 18px;
+            margin: auto;
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+        }
+        .prop-wrapper{
+            display: flex;
+            align-items: center;    
+            text-align: center;
+            margin: auto;
+        }
+        .prop{
+            margin: auto;
+			text-align: center;
+        }
+        .item{
+            display: flex;
+            height: fit-content;
+            padding: 20px;
+            border-bottom: 1px solid rgba(153, 99, 99, 0.3);
+        }
+        .product{
+            width: 90%; 
+        }
+        .img-product{
+            max-width: 100%;
+            max-height: 85%;
+            width: auto;
+            height: auto;
+            display: flex;
+            margin: auto;
+        }
+        .img-title{
+            /* margin: auto; */
+            text-align: center;
+            margin-top: 10px;
+        }
+		.payment-info{
+			text-align: center;
+			/* padding: 50px; */
+		}
+		.qrcode{
+			height: 250px;
+			width: 250px;
+			margin-bottom: 20px;
+		}
+		.total{            
+            display: flex;               
+            float: right;
+            margin-top: 18px;
+            margin-right: 20px;
+			margin-bottom: 20px;
+        }
+        .ptotal{
+            margin: 18px 10px;
+        }
+        .total-price{
+            color: red;
+            font-size: 24px;
+			margin-top: 8px;
+        }
+		.btn-checkout{
+			height: 30px;
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            float: right;
+			color: white !important;
+            border-radius: 0.1rem !important;
+        }
+		.form-popup {
+            display: none;
+             position: fixed;
+            /* border: 3px solid #f1f1f1;
+            margin: auto;  */
+            /* position: absolute; */
+            margin: auto;
+            top: calc(50% - 200px);
+            left: calc(50% - 200px);
+            box-shadow: 2px 2px 5px 0 rgba(1, 1, 1, 0.2), -2px -2px 5px 0 rgba(1, 1, 1, 0.2);
+            /* border: 3px solid #f1f1f1; */
+            color: white;
+            z-index: 9;
+        }           
+        .form-container {
+            display: block;
+            width: 400px;
+            padding: 30px;
+            background-color: rgb(0 , 0, 0, 0.7);           
+            text-align: center;
+        }
+	</style>
+</head>
+<body>
+    <div class="container-fluid">
+		<div class="overlay hidden"></div>
+      <!-- sidebar -->
+        <nav id="sidebar" class="hide-menu img">
+            <div class="p-4">
+            <a href="index.html" class="logo">AwesomePic</a>
+            <ul class="components mb-5">
+                <li id="home" class="active">
+                <a href="index.html"
+                    ><span class="fas fa-home mr-3"></span>Home</a
+                >
+                </li>
+                <li id="product">
+                <a href="products.html"
+                    ><span class="fas fa-image mr-3"></span>Product</a
+                >
+                </li>
+                <li id="pricing">
+                <a href="pricing.html"
+                    ><span class="fa fa-donate mr-3"></span>Pricing</a
+                >
+                </li>
+                <li id="aboutus">
+                <a href="aboutUs.html"
+                    ><span class="fa fa-users mr-3"></span>About Us</a
+                >
+                </li>
+                <li id="contactus">
+                <a href="contact.html"
+                    ><span class="fa fa-envelope mr-3"></span>Contact Us</a
+                >
+                </li>
+            </ul>
+
+            <div class="mb-5">
+                <h3 class="h6 mb-3">Receive notifications</h3>
+                <form action="get" class="subscribe-form">
+                <div class="form-group d-flex">
+                    <div class="icon"><span class="icon-paper-plane"></span></div>
+                    <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Enter Email Address"
+                    />
+                </div>
+                </form>
+            </div>
+
+            <div class="footer">
+                <p>
+                Copyright &copy;
+                <script>
+                    document.write(new Date().getFullYear());
+                </script>
+                All rights reserved | This template is made with
+                <i class="icon-heart" aria-hidden="true"></i> by
+                <a href="https://awesompic.com" target="_blank">awesomepic.com</a>
+                </p>
+            </div>
+            </div>
+        </nav>
+
+        <nav style="position: fixed" class="navbar-thao bg-light">
+            <ul class="navbar-ul">
+            <li>
+                <i class="fas fa-bars" id="menu-button"></i>
+                <a href="index.html" class="btn-thao hide-btn btn-primary my-0 left">
+                    <i class="fas fa-home"></i>
+                Home</a>                
+                <a href="products.html" class="btn-thao hide-btn btn-primary left">
+                    <i class="fas fa-images"></i>
+                Product</a>
+                <a href="pricing.html" class="btn-thao hide-btn btn-primary left">
+                    <i class="fas fa-donate"></i>
+                Pricing</a>
+            </li>
+            </ul>
+            <ul class="navbar-ul">
+            <li>
+                <a href="aboutUs.html" class="nav-page hide-btn">
+                    <i class="fas fa-users"></i>
+                About us</a>
+                <a href="contact.html" class="nav-page hide-btn">
+                    <i class="fas fa-envelope"></i>
+                Contact us</a>
+                <a href="carts.html">
+                    <i class="fas fa-cart-arrow-down"></i>
+                Cart</a>
+                <a href="signUp.html" class="nav-page">Sign Up</a>
+                <a href="login.html" class="btn-thao btn-primary gradient right"
+                >Sign In</a>
+            </li>
+            </ul>
+		</nav>
+		
+		<div class="huong-landing">
+			<p class="page-title">Payment</p>
+			<div class="address">
+				<p class="address-title">
+					<i class="fas fa-map-marker-alt"></i>
+				Delivery Address</p>
+			</div>
+			<div class="address-detail">
+
+				<div class="col-sm-3">Đàm Ngọc Hương (+84) 396715204</div>
+				<div class="col-sm-7">Ký túc xá khu B Đại học quốc gia TPHCM, Tx.Dĩ An, Bình Dương, Phường Linh Trung, Quận Thủ Đức, TP. Hồ Chí Minh
+				</div>
+				<a href="#" class="col-sm-2 change">
+					<i class="fa fa-refresh"></i>
+					Change</a>
+			</div>
+
+			<div class="info">
+				
+			</div>
+			<div class="cart-header">
+                <div class="cart-prop">
+                    <p class="col-sm-4 prop">Product</p>
+                    <p class="col-sm-2 prop">Category</p>
+                    <p class="col-sm-2 prop">Price</p>
+                    <p class="col-sm-2 prop">Quantity</p>
+                    <p class="col-sm-2 prop">Amount</p>                    
+                </div>                
+            </div>
+            <div class="item">
+                <div class="col-sm-4 product">
+                    <img src="img/products/detail/img-01-big.jpg"
+                        alt="Image" class=" img-product "/>
+                    <p class=" img-title">Image's title</p>
+                </div>
+                <div class="col-sm-2 prop-wrapper">
+                    <p class="prop">Wallpaper</p>
+                </div>
+                <div class="col-sm-2 prop-wrapper">
+                    <p class="prop">100.000</p>
+                </div>
+                <div class="col-sm-2 prop-wrapper">
+                    <p class="prop quantity">2</p>                   
+                </div>
+                <div class="col-sm-2 prop-wrapper">
+                    <p class="prop">200.000</p>
+                </div>                
+			</div>
+			<div class="item">
+                <div class="col-sm-4 product">
+                    <img src="img/products/detail/img-01-big.jpg"
+                        alt="Image" class=" img-product "/>
+                    <p class=" img-title">Image's title</p>
+                </div>
+                <div class="col-sm-2 prop-wrapper">
+                    <p class="prop">Wallpaper</p>
+                </div>
+                <div class="col-sm-2 prop-wrapper">
+                    <p class="prop">100.000</p>
+                </div>
+                <div class="col-sm-2 prop-wrapper">
+                    <p class="prop quantity">2</p>                   
+                </div>
+                <div class="col-sm-2 prop-wrapper">
+                    <p class="prop">200.000</p>
+                </div>                
+			</div>
+			<div class="payment-info">
+				<div class="cart-footer">
+					<div class="total">                    
+						<p class="ptotal">Total Price(6 Products):</p>
+						<p class="total-price">600.000 VND</p> 
+						<button onclick="openForm()" class="btn-thao btn-prima/ry gradient right btn-checkout">Pay</button>
+					                  
+					</div>
+					<br><br><br><br>
+					
+				</div>				
+			</div>
+		</div>
+		<div class="form-popup" id="myForm">
+            <form action="" class="form-container">
+                <p>Please scan this code to purchase the order</p>
+				<img src="img/qrcode.png" alt="Payment code"
+				class="qrcode">          
+                <button type="submit" class="btn btn-danger">Continue</button>
+                <button type="button" class="btn btn-warning cancel" onclick="closeForm()">Cancel</button>
+            </form>
+        </div>
+    </div>
+    <div class="powered">
+        <h6>
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-instagram"></a>
+          <a href="#" class="fa fa-snapchat-ghost"></a>
+          Powered by
+          <a href="index.html" class="awe">AwesomePic</a>
+        </h6>
+	</div>
+	<div class="footer">
+	<div class="private">
+		<ul class="footer-list">
+		<li>
+			<div class="footer-head-list">Get in Touch</div>
+		</li>
+		<li>
+			<a href="aboutUs.html" class="policy">About Us</a>
+		</li>
+		<li>
+			<a href="contact.html" class="policy">Contact Us</a>
+		</li>
+		</ul>
+		<ul class="footer-list">
+		<li>
+			<div class="footer-head-list">Policy</div>
+		</li>
+		<li>
+			<a href="#" class="policy">Term of Services</a>
+		</li>
+		<li>
+			<a href="#" class="policy">Private Policy</a>
+		</li>
+		</ul>
+	</div>
+	</div>
+    <button onclick="topFunction()" id="myBtn" class="hidden" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+	</button>
+	<script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+        
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+    <script src="JS/scrollToTop.js"></script>
+    <script src="JS/sidebar.js"></script>    
+</body>
+</html>

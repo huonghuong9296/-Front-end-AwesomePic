@@ -1,5 +1,6 @@
 @import 'config';
 @import 'utilities';
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -381,7 +382,7 @@ i.fas {
 .landing-home {
   margin-left: 15% !important;
   margin-right: 15% !important;
-  // background-color: orange;
+  background-color: #000;
 }
 
 #menu-button {
@@ -1871,15 +1872,6 @@ $side-color-6: darken($side-color-5, 10%);
     }
     .review-rating-star {
       font-size: 14px;
-      .fa-star {
-      }
-      div {
-        position: absolute;
-        width: 90%;
-        color: orange;
-        top: 0;
-        left: 0;
-      }
     }
   }
 
@@ -1955,7 +1947,7 @@ $side-color-6: darken($side-color-5, 10%);
       background-size: cover;
       border-radius: 50px;
       margin: 0 8px 0 0;
-      background-image: url('/FE/dist/img/avatar.png');
+      background-image: url("/FE/dist/img/avatar.png");
       position: relative;
       span {
         color: rgb(153, 153, 153);
@@ -1977,7 +1969,7 @@ $side-color-6: darken($side-color-5, 10%);
     font-weight: 600;
   }
   .review-comment-content {
-    margin: 0 0 8px;
+    margin: 0 0 8px ;
   }
   .review-comment-thank {
     padding: 8px 16px 9px;
@@ -2047,22 +2039,20 @@ $side-color-6: darken($side-color-5, 10%);
       font-weight: 600;
       height: 40px;
       width: 250px;
-      // background-color: #fdd22f;
+      background-color: #fdd22f;
     }
   }
 }
 
 .container {
-  height: fit-content;
   .account-layout {
     margin: 80px 0px;
-
     .account-inner {
       flex: 1 1 0%;
       .account-info {
         padding: 30px 20px;
         border-radius: 4px;
-        div {
+        form {
           width: 100%;
           .form-account-control {
             display: flex;
@@ -2114,7 +2104,7 @@ $side-color-6: darken($side-color-5, 10%);
     margin-left: 20px;
   }
 }
-.input-label {
+.input-label{
   span {
     font-size: 12px;
     display: block;
@@ -2122,10 +2112,9 @@ $side-color-6: darken($side-color-5, 10%);
   }
 }
 .form-account-control {
-  .birthday-style {
+  .birthday-style{
     select {
       width: 100px;
-      color: #000 !important;
       border: 1px solid rgb(204, 204, 204);
       height: 34px;
       padding: 0px 12px;
@@ -2142,109 +2131,11 @@ $side-color-6: darken($side-color-5, 10%);
     margin-left: 20px;
   }
 }
-
-.form-button {
-  justify-content: space-between;
-  .btn-submit {
-    border: none;
-    width: 176px !important;
-    height: 40px !important;
-    border-radius: 4px !important;
-    cursor: pointer;
-    background-color: #5366ab !important;
-    color: #fff !important;
-  }
-}
-.rating-wrapper {
-  display: flex;
-}
-#rating {
-  label {
-    color: #ddd;
-    float: right; /*float:right để lật ngược các ngôi sao lại đúng theo thứ tự trong thực tế*/
-  }
+.btn-submit {
   border: none;
   width: 176px;
   height: 40px;
   border-radius: 4px;
   cursor: pointer;
   background-color: rgb(253, 216, 53);
-}
-
-.fa-cart-arrow-down {
-  border: none;
-  outline: none;
-}
-.form-popup {
-  display: none;
-  position: absolute;
-  margin: auto;
-  top: 50px;
-  color: white;
-  z-index: 9;
-}
-.form-container {
-  color: white;
-  width: 150px;
-  background-color: rgb(0, 0, 0,);
-  text-align: center;
-}
-
-.form-item {
-  color: white;
-  width: 100%;
-  height: 100%;
-  padding: 10px;
-}
-.form-item:hover {
-  color: white;
-  background-color: rgb(0, 0, 0);
-}
-
-#btn-profile {
-  background-color: transparent;
-  border: none;
-  outline: none;
-  margin-bottom: 0.5rem;
-  float: left;
-  input {
-    display: none; /*ẩn input radio - vì chúng ta đã có label là GUI*/
-  }
-  label:before {
-    margin: 0 5px;
-    display: inline-block;
-  }
-}
-
-/*thêm màu cho sao đã chọn và các ngôi sao phía trước*/
-#rating > input:checked ~ label,
-#rating:not(:checked) > label:hover,
-#rating:not(:checked) > label:hover ~ label {
-  color: orange;
-}
-/* Hover vào các sao phía trước ngôi sao đã chọn*/
-#rating > input:checked + label:hover,
-#rating > input:checked ~ label:hover,
-#rating > label:hover ~ input:checked ~ label,
-#rating > input:checked ~ label:hover ~ label {
-  color: orange;
-}
-.quantity-product {
-  display: flex;
-}
-.cart-quantity {
-  display: flex;
-  span {
-    margin-right: 10px;
-  }
-  button {
-    width: 15px;
-    height: 28px;
-  }
-  p {
-    width: 15px;
-    height: 28px;
-    text-align: center;
-    border: solid black 1px;
-  }
 }

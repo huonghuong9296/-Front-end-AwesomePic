@@ -1,7 +1,5 @@
 .error-msg-admin {
   color: red;
-  font-style: italic;
-  font-size: smaller;
 }
 .title-msg-admin {
   color: blue;
@@ -16,8 +14,7 @@
   color:brown;
 }
 .add-btn-admin {
-  margin-top: 3px;
-  margin-bottom: 10px;
+  margin-top: 0px;
 }
 .container {
   padding-top: 0px;
@@ -28,106 +25,4 @@
 }
 .sub-tab-admin {
   padding-left: 30px !important;
-
-}
-.product-img-admin {
-  width: 60px;
-  height: 40px;
-}
-.sub-content-admin{
-  padding-left: 30px;
-}
-
-.align-items-center {
-  align-items: center !important;
-}
-.no-gutters {
-  margin-right: 0;
-  margin-left: 0;
-}
-.border-left-info {
-  border-left: 0.25rem solid #36b9cc !important;
-}
-.border-left-warning {
-  border-left: 0.25rem solid #f6c23e !important;
-}
-.border-left-primary {
-  border-left: 0.25rem solid #4e73df !important;
-}
-.border-left-success {
-  border-left: 0.25rem solid #1cc88a !important;
-}
-.border-left-danger {
-  border-left: 0.25rem solid #e74a3b !important;
-}
-.chart-area {
-  position: relative;
-  height: 10rem;
-  width: 100%;
-}
-@media (min-width: 768px) {
-  .chart-area {
-    height: 20rem;
-  }
-}
-.chart-bar {
-  position: relative;
-  height: 10rem;
-  width: 60%;
-}
-@media (min-width: 768px) {
-  .chart-bar {
-    height: 20rem;
-  }
-}
-.card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  word-wrap: break-word;
-  background-color: #fff;
-  background-clip: border-box;
-  border: 1px solid #e3e6f0;
-  border-radius: 0.35rem;
-}
-
-ul { list-style: none; }
-  ul>li>a {
-    color: grey;
-    text-decoration: none;
-    line-height: 1.8;
-}
-ul>li>a:hover,
-a:hover{
-  color: #ff6600;
-  font-weight: 500;
-}
-
-.col-heading {
-  display: block;
-  font-size: 2rem;
-  text-transform: uppercase;
-  color:#304f50;
-  font-weight: 500;
-  margin: 1rem 0;
-  padding: .4rem 0px;
-  border-bottom: 1px solid #c7c7c7; 
-  letter-spacing: 3px;
-}
-
-.icon-company-info {
-  color: #304f50;
-  margin-right: 10px;
-  font-size:18px;
-  width:2.25rem;
-}
-
-.company-info {
-  padding-left: 3rem;
-  color: #555;
-}
-.company-logo-admin {
-  width: 300px;
-  height: 300px;
 }

@@ -107,78 +107,59 @@
     <div class="container">
       <div class="account-layout">
         <div class="account-inner">
-          <h3 class="tm-text-gray-dark mb-3">ACCOUNT INFOMATION</h3>
+          <h3 class="tm-text-gray-dark mb-3">THÔNG TIN TÀI KHOẢN</h3>
           <div class="account-info">
             <form>
               <div class="form-account-control">
-                <label class="input-label">First Name <div style="display: inline-block; color: red;">*</div>:</label>
+                <label class="input-label">Họ tên:</label>
                 <div>
-                  <input type="text" name="firstname" maxlength="128" value="" placeholder="Your first name">
+                  <input type="text" name="fullName" maxlength="128" value="Nguyễn Văn Bảo Khánh">
                 </div>
               </div>
 
               <div class="form-account-control">
-                <label class="input-label">Last Name <div style="display: inline-block; color: red;">*</div>:</label>
+                <label class="input-label">Số điện thoại:</label>
                 <div>
-                  <input type="text" name="lastname" maxlength="128" value="" placeholder="Your last name">
+                  <input type="text" name="phone" maxlength="128" placeholder="Hãy nhập số điện thoại để trải nghiệm tốt hơn">
                 </div>
               </div>
 
               <div class="form-account-control">
-                <label class="input-label">Phone Number <div style="display: inline-block; color: red;">*</div>:</label>
+                <label class="input-label">Mã xác thực:</label>
                 <div>
-                  <input type="text" name="phone" maxlength="128" placeholder="Enter your phone number to have better experience">
+                  <input type="text" name="maxacthuc" maxlength="128" placeholder="Nhập mã xác thực được gửi tới số điện thoại trên">
+                  <button type="button">Gửi mã xác thực</button>
                 </div>
               </div>
 
               <div class="form-account-control">
-                <label class="input-label">Email <div style="display: inline-block; color: red;">*</div>:</label>
+                <label class="input-label">Email:</label>
                 <div>
-                  <input type="email" name="email" maxlength="128" placeholder="Please enter your email">
+                  <input type="email" name="email" maxlength="128" placeholder="Hãy nhập email">
                 </div>
               </div>
 
               <div class="form-account-control">
-                <label class="input-label">Address:</label>
-                <div>
-                  <input type="text" name="address" maxlength="128" placeholder="Enter your address">
-                </div>
-              </div>
-
-              <div class="form-account-control">
-                <label class="input-label">City:</label>
-                <div>
-                  <input type="text" name="city" maxlength="128" placeholder="Enter your city">
-                </div>
-              </div>
-
-              <div class="form-account-control">
-                <label class="input-label">Country:</label>
-                <div>
-                  <input type="tex" name="country" maxlength="128" placeholder="Enter your country">
-                </div>
-              </div>
-
-              <div class="form-account-control">
-                <label class="input-label">Gender <div style="display: inline-block; color: red;">*</div>:</label>
+                <label class="input-label">Giới tính:</label>
                 <label class="radio-style">
-                  <input type="radio" name="gender" value="male">
-                  <span class="label">Male</span>
+                  <input type="radio" name="gender" value="male" checked>
+                  <span class="label">Nam</span>
                 </label>
                 <label class="radio-style">
                   <input type="radio" name="gender" value="female">
                   <span class="radio-fake"></span>
-                  <span class="label">Female</span>
+                  <span class="label">Nữ</span>
                 </label>
               </div>
 
               <div class="form-account-control">
                 <label class="input-label">
-                  Birthday:
+                  Ngày sinh:
+                  <span>(Không bắt buộc)</span>
                 </label>
                 <div class="birthday-style">
                   <select name="day">
-                    <option value="0">Date</option>
+                    <option value="0">Ngày</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -212,7 +193,7 @@
                     <option value="31">31</option>
                   </select>
                   <select name="month">
-                    <option value="0">Month</option>
+                    <option value="0">Tháng</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -227,7 +208,7 @@
                     <option value="12">12</option>
                   </select>
                   <select name="year">
-                    <option value="0">Year</option>
+                    <option value="0">Năm</option>
                     <option value="2020">2020</option>
                     <option value="2019">2019</option>
                     <option value="2018">2018</option>
@@ -301,38 +282,36 @@
               <div class="form-account-control">
                 <label class="input-label"></label>
                 <label class="checkbox-style">
-                  <input type="checkbox" id="checkbox-password" onclick="showPassword()">
-                  <span class="label">Change password</span>
+                  <input type="checkbox">
+                  <span class="checkbox-fake"></span>
+                  <span class="label">Thay đổi mật khấu</span>
                 </label>
               </div> 
 
-              <div class="form-account-control" style="display: none;" id="oldpassword">
-                <label class="input-label">Old password <div style="display: inline-block; color: red;">*</div>:</label>
+              <div class="form-account-control">
+                <label class="input-label">Mật khẩu cũ:</label>
                 <div>
-                  <input type="password" required="" name="oldPassword" placeholder="Enter your old password" value="">
+                  <input type="password" required="" name="oldPassword" placeholder="Nhập mật khẩu cũ" value="">
                 </div>
               </div>
 
-              <div class="form-account-control" style="display: none;" id="newpassword">
-                <label class="input-label">New password <div style="display: inline-block; color: red;">*</div>:</label>
+              <div class="form-account-control">
+                <label class="input-label">Mật khẩu mới:</label>
                 <div>
-                  <input type="password" required="" name="password" placeholder="Enter your new password" value="">
+                  <input type="password" required="" name="password" placeholder="Mật khẩu từ 6 đến 32 ký tự" value="">
                 </div>
               </div>
 
-              <div class="form-account-control" style="display: none;" id="re-enter">
-                <label class="input-label">Re-enter <div style="display: inline-block; color: red;">*</div>:</label>
+              <div class="form-account-control">
+                <label class="input-label">Nhập lại:</label>
                 <div>
-                  <input type="password" required="" name="password" placeholder="Re-enter your new password" value="">
+                  <input type="password" required="" name="password" placeholder="Nhập lại mật khẩu mới" value="">
                 </div>
               </div>
 
               <div class="form-account-control">
                 <label class="input-label"></label>
-                <div class="form-button">
-                  <button class="btn-submit" type="submit">Update</button>
-                  <button class="btn-submit" type="reset">Clear</button>
-                </div>
+                <button class="btn-submit" type="submit">Cập nhật</button>
               </div>              
 
             </form>
@@ -380,6 +359,5 @@
       crossorigin="anonymous"
     ></script>
     <script src="JS/sidebar.js"></script>
-    <script src="JS/account.js"></script>
   </body>
 </html>
